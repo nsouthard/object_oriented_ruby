@@ -1,4 +1,4 @@
-# employee_1 = ["Jim", "Jefferies", 70000, true]
+ # employee_1 = ["Jim", "Jefferies", 70000, true]
 # employee_2 = ["Maria", "Bamford", 80000, true]
 
 # puts employee_1[0] + " " + employee_1[1] + " makes " + employee_1[2].to_s + " a year."
@@ -51,6 +51,22 @@ class Employee
 
 end
 
+class Manager <Employee
+  def initialize(input_options)
+    super(input_options)
+    @employees = input_options[:employees]
+  end
+
+  def send_report
+    puts "Sending email..."
+    #the code to send report
+    puts "Email sent."
+  end
+end
+
+
+
+
 employee_1 = Employee.new(
   first_name: "Jim", 
   last_name:"Jefferies", 
@@ -65,8 +81,18 @@ employee_2 = Employee.new(
   active: true
   )
 
+manager = Manager.new(
+  first_name: "Patton",
+  last_name: "Oswalt",
+  salary: 100000,
+  active: true,
+  employees: [employee_1, employee_2]
+  )
+
 employee_1.print_info
 employee_2.print_info
+manager.print_info
+
 # employee_2.give_annual_raise
 # employee_2.print_info
 # puts employee_2.first_name
@@ -76,4 +102,5 @@ employee_2.print_info
 puts employee_1.active
 employee_1.active = false
 puts employee_1.active
+puts employee_1.salary
 
