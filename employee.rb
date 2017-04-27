@@ -103,4 +103,6 @@ puts employee_1.active
 employee_1.active = false
 puts employee_1.active
 puts employee_1.salary
+puts employee_1.give_annual_raise
+puts employee_2.give_annual_raise
 

@@ -59,6 +59,7 @@ employee2.print_info
 
 class Intern < Employee
   include Reporting
+end
 
 intern = Intern.new(
   first_name: "Jimmy",

@@ -33,13 +33,33 @@ class Merchandise
 
 end
 
+class Food
+     attr_reader :item, :input_shelf_life
+
+     def initialize(input_item, input_shelf_life)
+          @item = input_item
+          @shelf_life = input_shelf_life
+     end
+
+     def print_info 
+          puts "#{@item} have a shelf life of #{@shelf_life}"
+     end
+end
+
 merchandise_1 = Merchandise.new("Shoes", "Black", 50)
 merchandise_2 = Merchandise.new("Shirt", "Gray", 25)
 merchandise_3 = Merchandise.new("Hat", "Red", 15)
+food_1 = Food.new("Apples", "1 month")
+food_2 = Food.new("Canned Tomatoes", "1 year")
+food_3 = Food.new("Oreos", "9 months")
 merchandise_1.print_info
 merchandise_2.print_info
 merchandise_3.print_info
 merchandise_1.price = 60
 puts merchandise_1.price
+food_1.print_info
+food_2.print_info
+food_3.print_info
+
 
 
